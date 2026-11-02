@@ -3,10 +3,29 @@ main = "src/index.ts"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
+workers_dev = false
+preview_urls = false
+
 [vars]
 # BARK_KEY = ""
 # BARK_SERVER = "https://api.day.app"
 
-[observability]
-enabled = true
 
+[observability]
+enabled = false
+head_sampling_rate = 1
+redact_query_string = false
+
+[observability.logs]
+enabled = false
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
+
+[observability.traces]
+enabled = false
+head_sampling_rate = 1
+persist = true
+
+[observability.issues]
+enabled = false
